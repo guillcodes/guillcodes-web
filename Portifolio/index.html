@@ -1,20 +1,361 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>guillcodes-web</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Meu portfólio - Desenvolvedor Web">
+    <meta name="author" content="Seu Nome">
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Guilherme - Desenvolvedor Web</title>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao guillcodes-web</h1>
+    <!-- Tela de carregamento -->
+    <div class="tela-carregamento" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Cabeçalho fixo -->
+    <header id="cabecalho">
+        <nav>
+            <div class="logo">Meu Portfólio</div>
+            <ul class="menu-desktop">
+                <li><a href="#inicio" class="link-menu ativo">Início</a></li>
+                <li><a href="#habilidades" class="link-menu">Habilidades</a></li>
+                <li><a href="#projetos" class="link-menu">Projetos</a></li>
+                <li><a href="#contato" class="link-menu">Contato</a></li>
+            </ul>
+            <button class="botao-menu-mobile" id="botaoMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
     </header>
-    <main>
-        <p>Este é o início do seu projeto web.</p>
-    </main>
+
+    <!-- Menu para celular -->
+    <div class="menu-mobile" id="menuMobile">
+        <div class="topo-menu-mobile">
+            <div class="logo">Meu Portfólio</div>
+            <button class="fechar-menu" id="fecharMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="links-menu-mobile">
+            <li><a href="#inicio" class="link-mobile">Início</a></li>
+            <li><a href="#habilidades" class="link-mobile">Habilidades</a></li>
+            <li><a href="#projetos" class="link-mobile">Projetos</a></li>
+            <li><a href="#contato" class="link-mobile">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Seção principal -->
+    <section class="secao-inicio" id="inicio">
+        <div class="icone-flutuante codigo">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="icone-flutuante design">
+            <i class="fas fa-palette"></i>
+        </div>
+        
+        <div class="conteudo-inicio">
+            <div class="texto-inicio aparecer">
+                <h1>Olá, eu sou <span class="destaque">Guilherme</span></h1>
+                <p class="subtitulo">Desenvolvedor Web & Designer</p>
+                <p>Crio sites modernos e responsivos. Transformo suas ideias em realidade digital.</p>
+                <div class="botoes-inicio">
+                    <a href="#projetos" class="botao botao-principal">
+                        <i class="fas fa-rocket"></i>
+                        Ver Meus Projetos
+                    </a>
+                    <a href="#contato" class="botao botao-secundario">
+                        <i class="fas fa-envelope"></i>
+                        Fale Comigo
+                    </a>
+                </div>
+            </div>
+            
+            <div class="foto-perfil aparecer">
+                <div class="cartao-perfil">
+                    <div class="imagem-perfil">
+                        <i class="fas fa-user"></i>
+                        <!-- Sua foto aqui: <img src="minha-foto.jpg" alt="Minha Foto"> -->
+                    </div>
+                    <div class="info-perfil">
+                        <h3>Guilherme Candida</h3>
+                        <p>Desenvolvedor Web</p>
+                        <div class="redes-sociais">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de habilidades -->
+    <section class="secao-habilidades" id="habilidades">
+        <div class="container">
+            <div class="titulo-secao aparecer">
+                <h2>Minhas <span class="destaque">Habilidades</span></h2>
+                <p>Tecnologias que uso para criar sites incríveis</p>
+            </div>
+            
+            <div class="grade-habilidades">
+                <div class="categoria-habilidade aparecer">
+                    <h3>
+                        <i class="fas fa-code"></i>
+                        Front-end (Visual)
+                    </h3>
+                    <div class="lista-habilidades">
+                        <span class="habilidade">HTML5</span>
+                        <span class="habilidade">CSS3</span>
+                        <span class="habilidade">JavaScript</span>
+                        <span class="habilidade">React</span>
+                    </div>
+                </div>
+                
+                <div class="categoria-habilidade aparecer">
+                    <h3>
+                        <i class="fas fa-server"></i>
+                        Back-end (Sistema)
+                    </h3>
+                    <div class="lista-habilidades">
+                        <span class="habilidade">Python</span>
+                        <span class="habilidade">PHP</span>
+                        <span class="habilidade">MySQL</span>
+                        <span class="habilidade">APIs</span>
+                    </div>
+                </div>
+                
+                <div class="categoria-habilidade aparecer">
+                    <h3>
+                        <i class="fas fa-tools"></i>
+                        Ferramentas
+                    </h3>
+                    <div class="lista-habilidades">
+                        <span class="habilidade">Git</span>
+                        <span class="habilidade">VS Code</span>
+                        <span class="habilidade">Photoshop</span>
+                        <span class="habilidade">Figma</span>
+                        <span class="habilidade">Canva</span>
+                    </div>
+                </div>
+                
+                <div class="categoria-habilidade aparecer">
+                    <h3>
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile & Design
+                    </h3>
+                    <div class="lista-habilidades">
+                        <span class="habilidade">Design Responsivo</span>
+                        <span class="habilidade">UI/UX Design</span>
+                        <span class="habilidade">Adobe XD</span>
+                        <span class="habilidade">App Mobile</span>
+                        <span class="habilidade">Landing Pages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de projetos -->
+    <section class="secao-projetos" id="projetos">
+        <div class="container">
+            <div class="titulo-secao aparecer">
+                <h2>Meus <span class="destaque">Projetos</span></h2>
+                <p>Alguns trabalhos que já desenvolvi</p>
+            </div>
+            
+            <div class="grade-projetos">
+                <div class="cartao-projeto aparecer">
+                    <div class="imagem-projeto">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="conteudo-projeto">
+                        <h3>Loja Online</h3>
+                        <p>Site de vendas completo com carrinho de compras, pagamentos e painel administrativo.</p>
+                        <div class="tecnologias-projeto">
+                            <span class="tech">React</span>
+                            <span class="tech">Node.js</span>
+                            <span class="tech">MySQL</span>
+                        </div>
+                        <div class="links-projeto">
+                            <a href="#" class="botao-principal">Ver Site</a>
+                            <a href="#" class="botao-secundario">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cartao-projeto aparecer">
+                    <div class="imagem-projeto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="conteudo-projeto">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Painel para visualizar dados com gráficos interativos e relatórios em tempo real.</p>
+                        <div class="tecnologias-projeto">
+                            <span class="tech">Vue.js</span>
+                            <span class="tech">Chart.js</span>
+                            <span class="tech">PHP</span>
+                        </div>
+                        <div class="links-projeto">
+                            <a href="#" class="botao-principal">Ver Site</a>
+                            <a href="#" class="botao-secundario">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cartao-projeto aparecer">
+                    <div class="imagem-projeto">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="conteudo-projeto">
+                        <h3>App de Tarefas</h3>
+                        <p>Aplicativo para organizar tarefas diárias com lembretes e sincronização na nuvem.</p>
+                        <div class="tecnologias-projeto">
+                            <span class="tech">React Native</span>
+                            <span class="tech">Firebase</span>
+                            <span class="tech">JavaScript</span>
+                        </div>
+                        <div class="links-projeto">
+                            <a href="#" class="botao-principal">Ver App</a>
+                            <a href="#" class="botao-secundario">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cartao-projeto aparecer">
+                    <div class="imagem-projeto">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="conteudo-projeto">
+                        <h3>Blog Pessoal</h3>
+                        <p>Site de blog com editor de textos, comentários e otimização para Google.</p>
+                        <div class="tecnologias-projeto">
+                            <span class="tech">WordPress</span>
+                            <span class="tech">PHP</span>
+                            <span class="tech">MySQL</span>
+                        </div>
+                        <div class="links-projeto">
+                            <a href="#" class="botao-principal">Ver Blog</a>
+                            <a href="#" class="botao-secundario">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de contato -->
+    <section class="secao-contato" id="contato">
+        <div class="container">
+            <div class="titulo-secao aparecer">
+                <h2>Vamos <span class="destaque">Conversar</span></h2>
+                <p>Tem um projeto em mente? Me mande uma mensagem!</p>
+            </div>
+            
+            <div class="conteudo-contato">
+                <div class="info-contato aparecer">
+                    <h3>Entre em Contato</h3>
+                    <p>Estou sempre disponível para novos projetos e parcerias.</p>
+                    
+                    <div class="detalhes-contato">
+                        <div class="item-contato">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>guilcodez@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="item-contato">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>+55 (41) 987235232</p>
+                            </div>
+                        </div>
+                        
+                        <div class="item-contato">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Curitiba, Brasil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="item-contato">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horário</h4>
+                                <p>Segunda à Sexta, 9h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form 
+                class="formulario-contato aparecer" 
+                id="formularioContato" 
+                action="https://formspree.io/f/xvgzqodq" 
+                method="POST">
+
+                <!-- Campo Nome -->
+                <div class="campo-formulario">
+                    <label for="nome">Nome *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="campo-formulario">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Campo Assunto -->
+                <div class="campo-formulario">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto">
+                </div>
+
+                <!-- Campo Mensagem -->
+                <div class="campo-formulario">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Me conte sobre seu projeto..."></textarea>
+                </div>
+
+                <!-- Campo oculto para redirecionamento -->
+                <input type="hidden" name="_redirect" value="">
+
+                <!-- Botão de envio -->
+                <button type="submit" class="botao botao-principal enviar-formulario">
+                    <i class="fas fa-paper-plane"></i> Enviar
+                </button>
+            </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 guillcodes-web</p>
+        <div class="container">
+            <p>&copy; 2025 Guilherme Candida de Amorim. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Meu JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
